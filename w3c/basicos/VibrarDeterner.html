@@ -12,16 +12,15 @@
 
 
         .boton {
+            margin: auto;
+            width: 50%;
             background-color: rgb(14, 156, 57);
             color: rgba(240, 231, 231, 0.938);
             border: 2px solid rgb(0, 7, 0);
             padding: 10px 20px;
             text-align: center;
             text-decoration: none;
-            display: inline-block;
-            margin:auto;
-            width:50%;
-            }
+        }
     </style>
 
 </head>
@@ -33,8 +32,12 @@
         <div>Vibrar y detener</div>
     </h2>
 
-    <p><div class="boton" onclick="navigator.vibrate(5000);">Vibrar </div></p>
-    <p><div class="boton" onclick="navigator.vibrate(0);">Detener </div></p>
+    <p>
+    <div class="boton" onclick="navigator.vibrate(5000);">Vibrar </div>
+    </p>
+    <p>
+    <div class="boton" onclick="navigator.vibrate(0);">Detener </div>
+    </p>
 </body>
 
 </html>
