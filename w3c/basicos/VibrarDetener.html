@@ -11,10 +11,21 @@
         }
 
 
-        .boton {
+        .botonVerde {
             margin: auto;
             width: 50%;
             background-color: rgb(14, 156, 57);
+            color: rgba(240, 231, 231, 0.938);
+            border: 2px solid rgb(0, 7, 0);
+            border-radius: 25px;
+            padding: 10px 40px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .botonRojo {
+            margin: auto;
+            width: 50%;
+            background-color: rgb(240, 13, 13);
             color: rgba(240, 231, 231, 0.938);
             border: 2px solid rgb(0, 7, 0);
             border-radius: 25px;
@@ -31,10 +42,10 @@
         <div>Vibrar y detener</div>
     </h2>
     <p>
-    <div class="boton" onclick="navigator.vibrate(5000);">Vibrar </div>
+    <div class="botonVerde" onclick="navigator.vibrate(5000);">Vibrar </div>
     </p>
     <p>
-    <div class="boton" onclick="navigator.vibrate(0);">Detener </div>
+    <div class="botonRojo" onclick="navigator.vibrate(0);">Detener </div>
     </p>
 </body>
 
