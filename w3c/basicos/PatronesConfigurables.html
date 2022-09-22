@@ -1,55 +1,39 @@
 <!DOCTYPE html>
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Interacciones hápticas</title>
-<style>
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-
-  .botonVerde {
-    margin: auto;
-    width: 50%;
-    background-color: rgb(14, 156, 57);
-    color: rgba(240, 231, 231, 0.938);
-    border-radius: 25px;
-    padding: 40px 20px;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .botonRojo {
-    margin: auto;
-    width: 50%;
-    background-color: rgb(240, 13, 13);
-    color: rgba(240, 231, 231, 0.938);
-    border-radius: 25px;
-    padding: 40px 20px;
-    text-align: center;
-    text-decoration: none;
-  }
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interacciones vibrotáctiles</title>
 
 </head>
 
 <body>
+  <header class="w3-container w3-card-4 w3-theme w3-center">
+    <h1>Interacciones vibrotáctiles</h1>
+  </header>
+  <div class="w3-panel">
+    <div class="w3-row w3-center w3-section">
+      <button class="w3-button  w3-block w3-teal" onclick="navigator.vibrate([500,100,500,100,500]);">Patron 1
+        (500,100,500,100,500) </button>
+    </div>
+    <div class="w3-row w3-center w3-section">
+      <button class="w3-button  w3-block w3-teal" onclick="navigator.vibrate([100,500,100,500,100]);">Patron 2
+        (100,500,100,500,100) </button>
+    </div>
+    <div class="w3-row w3-center w3-section">
+      <button class="w3-button w3-block  w3-teal" onclick="navigator.vibrate(0);">Detener </button>
+    </div>
 
-  <h1><a href="../index.html">Interacciones hápticas</a></h1>
-  <p>
-    <div><input type="number" id="v1" name="v" min="100" max="1000" step="100" value="500"></div>
-  </p>
-  
-  <p>
-  <div class="botonVerde" onclick="navigator.vibrate([500,100,500,100,500]);">Patron 1 (500,100,500,100,500) </div>
-  </p>
-  <p>
-    <div class="botonVerde" onclick="navigator.vibrate([100,500,100,500,100]);">Patron 2 (100,500,100,500,100) </div>
-    </p>
-  <p>
-  <div class="botonRojo" onclick="navigator.vibrate(0);">Detener </div>
-  </p>
+  </div>
+  <div class="w3-bar w3-theme-dark w3-xlarge">
+    <a class="w3-bar-item w3-button" href="./PatronesFijos.html">«</a>
+    <a class="w3-bar-item w3-button w3-right" href="">»</a>
+  </div>
+
+
 </body>
+
 </html>
