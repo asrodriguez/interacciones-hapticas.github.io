@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.btn {
-  border: none;
-  color: white;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interacciones vibrotáctiles</title>
 
-.success {background-color: #04AA6D;} /* Green */
-.success:hover {background-color: #46a049;}
-
-.info {background-color: #2196F3;} /* Blue */
-.info:hover {background: #0b7dda;}
-
-.warning {background-color: #ff9800;} /* Orange */
-.warning:hover {background: #e68a00;}
-
-.danger {background-color: #f44336;} /* Red */ 
-.danger:hover {background: #da190b;}
-
-.default {background-color: #e7e7e7; color: black;} /* Gray */ 
-.default:hover {background: #ddd;}
-</style>
 </head>
-<body>
 
-<h1>Alert Buttons</h1>
-<div><p><hr></p></div>
-<div><button class="btn success">Success</button></div>
-<div><p><hr></p></div>
-<div><button class="btn info">Info</button></div>
-<div><p><hr></p></div>
-<div><button class="btn warning">Warning</button></div>
-<div><p><hr></p></div>
-<div><button class="btn danger">Danger</button></div>
-<div><p><hr></p></div>
-<div><button class="btn default">Default</button></div>
-<div><p><hr></p></div>
+<body>
+  <header class="w3-container w3-card-4 w3-theme w3-center">
+    <h1>Interacciones vibrotáctiles</h1>
+  </header>
+  <div class="w3-container w3-center">
+
+    <h2>Alertas</h2>
+
+    <div class="w3-panel w3-red">
+      <h3>Danger!</h3>
+      <p>Red often indicates a dangerous or negative situation.</p>
+    </div> 
+    
+  </div>
+  <script>
+    function myFunction(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        navigator.vibrate(400);
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+        navigator.vibrate(200);
+      }
+    }
+  </script>
+
+  <div class="w3-bar w3-theme-dark w3-xlarge ">
+    <a class="w3-bar-item w3-button" href="../../index.html">«</a>
+    <a class="w3-bar-item w3-button w3-center" href="../index.html">inicio</a>
+    <a class="w3-bar-item w3-button w3-right" href="./Basicos2.html">»</a>
+  </div>
+
+
 </body>
+
 </html>
