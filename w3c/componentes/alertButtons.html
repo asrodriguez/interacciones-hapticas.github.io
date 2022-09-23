@@ -19,43 +19,41 @@
     <h2>Alertas</h2>
 
     <div class="w3-container">
-        <button onclick="myFunction('peligro')" class="w3-button w3-teal w3-margin">Accion 1</button>
-        <button onclick="myFunction('cuidado')" class="w3-button w3-teal w3-margin">Accion 2</button>
-        <button  onclick="myFunction('exito')" class="w3-button w3-teal w3-margin">Accion 3</button>
-      
+      <button onclick="myFunction('peligro')" class="w3-button w3-teal w3-margin">Accion 1</button>
+      <button onclick="myFunction('cuidado')" class="w3-button w3-teal w3-margin">Accion 2</button>
+      <button onclick="myFunction('exito')" class="w3-button w3-teal w3-margin">Accion 3</button>
+
     </div>
 
     <div id="peligro" class="w3-hide w3-panel w3-red w3-display-container">
-      <span onclick="this.parentElement.style.display='none'"
-      class="w3-button w3-large w3-display-topright">&times;</span>
       <h3>Peligro!</h3>
       <p>Acción peligrosa o negativa.</p>
     </div>
-    
+
     <div id="cuidado" class="w3-hide w3-panel w3-yellow w3-display-container">
-      <span onclick="this.parentElement.style.display='w3-hide'"
-      class="w3-button w3-large w3-display-topright">&times;</span>
+
       <h3>Advertencia!</h3>
       <p>Algo podría salir mal o ser peligroso.</p>
     </div>
-    
+
     <div id="exito" class="w3-hide w3-panel w3-green w3-display-container">
-      <span onclick="this.parentElement.style.display='none'"
-      class="w3-button w3-large w3-display-topright">&times;</span>
+
       <h3>Exito!</h3>
       <p>Acción exitosa o positva.</p>
     </div>
-    
-   
-    
+
+
+
 
   </div>
   <script>
     function myFunction(id) {
       var x = document.getElementById(id);
+      var peligro = [100,100,500];
+
       if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-        navigator.vibrate(400);
+        navigator.vibrate(peligro);
       } else {
         x.className = x.className.replace(" w3-show", "");
         navigator.vibrate(200);
