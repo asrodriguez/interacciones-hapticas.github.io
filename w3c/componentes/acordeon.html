@@ -1,82 +1,60 @@
 <!DOCTYPE html>
 <html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interacciones vibrotáctiles</title>
 
-.active, .accordion:hover {
-  background-color: #ccc; 
-}
-
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-
-.accordion:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: #777;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
-}
-</style>
 </head>
+
 <body>
+  <div class="w3-container">
 
-<h2>Accordion</h2>
-
-<button class="accordion">Section 1</button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-<button class="accordion">Section 2</button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-<button class="accordion">Section 3</button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
+    <h2>Accordion Buttons</h2>
+    <p>You can use any HTML element to open the accordion content. We prefer a button with a w3-block class, because it spans the entire width of its parent element, just like the accordion content (100% width). Remember that buttons in W3.CSS are centered by default. Use the w3-left-align class if you want them left aligned instead. However, you do not have to follow our approach.</p>
+    
+    <button onclick="myFunction('Demo1')" class="w3-button w3-light-grey">
+    Normal button</button>
+    
+    <div id="Demo1" class="w3-hide w3-container w3-light-grey">
+      <p>Lorem ipsum...</p>
+    </div>
+    <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-left-align w3-green">
+    Left aligned and full-width</button>
+    
+    <div id="Demo2" class="w3-hide w3-container">
+      <p>Lorem ipsum...</p>
+    </div>
+    
+    <button onclick="myFunction('Demo3')" class="w3-btn w3-block w3-red">
+    Centered and full-width</button>
+    
+    <div id="Demo3" class="w3-hide w3-container w3-center w3-pale-red">
+      <p>Centered content as well!</p>
+    </div>
+    
+    </div>
+    <script>
+    function myFunction(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
     }
-  });
-}
-</script>
+    </script>
+    
+    <div class="w3-bar w3-theme-dark w3-xlarge ">
+        <a class="w3-bar-item w3-button" href="../../index.html">«</a>
+        <a class="w3-bar-item w3-button w3-center" href="../index.html">inicio</a>
+        <a class="w3-bar-item w3-button w3-right" href="./Basicos2.html">»</a>
+        </div>
+
 
 </body>
-</html>
 
+</html>
