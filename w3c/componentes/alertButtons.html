@@ -19,27 +19,27 @@
     <h2>Alertas</h2>
 
     <div class="w3-container">
-        <button class="w3-button w3-teal w3-margin">Peligro</button>
-        <button class="w3-button w3-teal w3-margin">Cuidado</button>
-        <button class="w3-button w3-tealw3-margin">Exito</button>
+        <button onclick="myFunction('peligro')" class="w3-button w3-teal w3-margin">Accion 1</button>
+        <button onclick="myFunction('cuidado')" class="w3-button w3-teal w3-margin">Accion 2</button>
+        <button  onclick="myFunction('exito')" class="w3-button w3-teal w3-margin">Accion 3</button>
       
     </div>
 
-    <div id="peligro" class="w3-panel w3-red w3-display-container">
+    <div id="peligro" class="w3-hide w3-panel w3-red w3-display-container">
       <span onclick="this.parentElement.style.display='none'"
       class="w3-button w3-large w3-display-topright">&times;</span>
       <h3>Peligro!</h3>
       <p>Acción peligrosa o negativa.</p>
     </div>
     
-    <div class="w3-panel w3-yellow w3-display-container">
+    <div id="cuidado" class="w3-hide w3-panel w3-yellow w3-display-container">
       <span onclick="this.parentElement.style.display='none'"
       class="w3-button w3-large w3-display-topright">&times;</span>
       <h3>Advertencia!</h3>
       <p>Algo podría salir mal o ser peligroso.</p>
     </div>
     
-    <div class="w3-panel w3-green w3-display-container">
+    <div id="exito" class="w3-hide w3-panel w3-green w3-display-container">
       <span onclick="this.parentElement.style.display='none'"
       class="w3-button w3-large w3-display-topright">&times;</span>
       <h3>Exito!</h3>
