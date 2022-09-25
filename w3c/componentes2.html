@@ -19,7 +19,8 @@
     <h2>Alertas</h2>
 
     <div class="w3-container">
-      <button onclick="myFunction('peligro')" class="w3-button w3-teal w3-margin-right w3-margin-bottom">Accion 1</button>
+      <button onclick="myFunction('peligro')" class="w3-button w3-teal w3-margin-right w3-margin-bottom">Accion
+        1</button>
       <button onclick="myFunction('cuidado')" class="w3-button w3-teal w3-margin-bottom">Accion 2</button>
       <button onclick="myFunction('exito')" class="w3-button w3-teal w3-margin-left w3-margin-bottom">Accion 3</button>
 
@@ -41,20 +42,17 @@
       <h3>Exito!</h3>
       <p>Acción exitosa o positva.</p>
     </div>
-
-
- <div class="w3-bar w3-theme-dark w3-xlarge ">
-    <a class="w3-bar-item w3-button" href="./componentes1.html">«</a>
-    <a class="w3-bar-item w3-button w3-center" href="../index.html">inicio</a>
-    <a class="w3-bar-item w3-button w3-right" href="./componentes3.html">»</a>
   </div>
 
-
+  <div class="w3-bar w3-theme-dark w3-xlarge ">
+    <a class="w3-bar-item w3-button" href="./componentes1.html">«</a>
+    <a class="w3-bar-item w3-button w3-display-middle" href="../index.html">inicio</a>
+    <a class="w3-bar-item w3-button w3-right" href="./componentes3.html">»</a>
   </div>
   <script>
     function myFunction(id) {
       var x = document.getElementById(id);
-      var peligro = [100,100,500];
+      var peligro = [100, 100, 500];
 
       if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
@@ -66,7 +64,7 @@
     }
   </script>
 
- 
+
 
 </body>
 
